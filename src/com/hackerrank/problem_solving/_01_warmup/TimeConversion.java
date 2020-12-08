@@ -1,4 +1,4 @@
-package com.hackerrank.problem_solving._02_warmup;
+package com.hackerrank.problem_solving._01_warmup;
 
 public class TimeConversion {
 
