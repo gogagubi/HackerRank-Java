@@ -6,29 +6,31 @@ import java.util.*;
 public class DijkstraShortestReach2 {
 
     public static void main(String[] args) {
+        DijkstraShortestReach2 o = new DijkstraShortestReach2();
+
         //Test Case 0
         if (true) {
-            runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase0"); //expected 24 3 15
+            o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase0"); //expected 24 3 15
         }
 
         //Test Case 1
         if (false) {
-            runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase1");
+            o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase1");
         }
 
         //Test Case 2
         if (true) {
-            runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase2");
+            o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase2");
             //expected 3 6 4 5 5 4 5 4 3 3 4 6 6 4 4 4 4 5 3 4 5 3 4 6 8 4 5 3 4 4 5 4 6 6 2 4 6 4 4 4 4 5 5 3 4 5 3 6 5 4 5 5 4 4 5 3 3 4 2 3 5 2 4 4 3 4 10 5 5 7 4 4 4 1 4 4 4 5 4 4 5 4 4 5 4 5 6 5 4 4 5 5 5 4 4 4 4 3 4 5 3 3 5 4 6 8 2 5 3 4 4 5 3 5 3 3 4 5 3 6 5
         }
 
         //Test Case 8
         if (true) {
-            runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase8"); //expected 10 16 8 -1
+            o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase8"); //expected 10 16 8 -1
         }
     }
 
-    private static void runTestCase(String fileName) {
+    private void runTestCase(String fileName) {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 
@@ -67,8 +69,7 @@ public class DijkstraShortestReach2 {
                     edges[j] = edgesList.get(j);
                 }
 
-                DijkstraShortestReach2 o = new DijkstraShortestReach2();
-                int[] res = o.shortestReach(n, edges, s);
+                int[] res = shortestReach(n, edges, s);
 
                 StringBuilder builder = new StringBuilder();
                 for (int r : res) {
