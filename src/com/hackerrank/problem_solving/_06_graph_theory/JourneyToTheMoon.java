@@ -15,6 +15,7 @@ public class JourneyToTheMoon {
             };
 
             System.out.println("Result = " + o.journeyToMoon(n, astronaut)); //expected 6
+            System.out.println("Result = " + o.journeyToMoonV1(n, astronaut)); //expected 6
         }
 
         if (true) {
@@ -28,6 +29,7 @@ public class JourneyToTheMoon {
             };
 
             System.out.println("Result = " + o.journeyToMoon(n, astronaut)); //expected 31
+            System.out.println("Result = " + o.journeyToMoonV1(n, astronaut)); //expected 31
         }
 
         if (true) {
@@ -39,6 +41,7 @@ public class JourneyToTheMoon {
             };
 
             System.out.println("Result = " + o.journeyToMoon(n, astronaut)); //expected 4999949998
+            System.out.println("Result = " + o.journeyToMoonV1(n, astronaut)); //expected 4999949998
         }
     }
 
@@ -50,9 +53,25 @@ public class JourneyToTheMoon {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             int count = dfs(i, visited, map);
-            if(count > 0){
+            if (count > 0) {
                 ans += sum * count;
                 sum += count;
+            }
+        }
+
+        return ans;
+    }
+
+    private long journeyToMoonV1(int n, int[][] astronaut) {
+        Map<Integer, List<Integer>> map = buildMap(astronaut);
+        boolean[] visited = new boolean[n];
+
+        long ans = (long) n * (n - 1) / 2;
+
+        for (int i = 0; i < n; i++) {
+            int count = dfs(i, visited, map);
+            if (count > 0) {
+                ans -= (count * (count - 1)) / 2;
             }
         }
 
