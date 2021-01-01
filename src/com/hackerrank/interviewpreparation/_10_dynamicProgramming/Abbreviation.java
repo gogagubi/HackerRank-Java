@@ -8,10 +8,10 @@ public class Abbreviation {
             String a = "AbcDE";
             String b = "ABDE";
 
-            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: No
+            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: Yes
         }
 
-        if (false) {
+        if (true) {
             Abbreviation o = new Abbreviation();
             String a = "beFgH";
             String b = "EFG";
@@ -19,20 +19,20 @@ public class Abbreviation {
             System.out.println("Result: " + o.abbreviation(a, b)); //Expected: No
         }
 
-        if (false) {
+        if (true) {
             Abbreviation o = new Abbreviation();
             String a = "DINVMKSOfsVQByBnCWNKPRFRKMhFRSkNQRBVNTIKNBXRSXdADOSeNDcLWFCERZOLQjEZCEPKXPCYKCVKALNxBADQBFDQUpdqunpelxauyyrwtjpkwoxlrrqbjtxlkvkcajhpqhqeitafcsjxwtttzyhzvh";
             String b = "DINVMKSOVQBBCWNKPRFRKMFRSNQRBVNTIKNBXRSXADOSNDLWFCERZOLQEZCEPKXPCYKCVKALNBADQBFDQU";
 
-            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: No
+            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: Yes
         }
 
-        if (false) {
+        if (true) {
             Abbreviation o = new Abbreviation();
             String a = "BFZZVHdQYHQEMNEFFRFJTQmNWHFVXRXlGTFNBqWQmyOWYWSTDSTMJRYHjBNTEWADLgHVgGIRGKFQSeCXNFNaIFAXOiQORUDROaNoJPXWZXIAABZKSZYFTDDTRGZXVZZNWNRHMvSTGEQCYAJSFvbqivjuqvuzafvwwifnrlcxgbjmigkms";
             String b = "BFZZVHQYHQEMNEFFRFJTQNWHFVXRXGTFNBWQOWYWSTDSTMJRYHBNTEWADLHVGIRGKFQSCXNFNIFAXOQORUDRONJPXWZXIAABZKSZYFTDDTRGZXVZZNWNRHMSTGEQCYAJSF";
 
-            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: No
+            System.out.println("Result: " + o.abbreviation(a, b)); //Expected: Yes
         }
     }
 

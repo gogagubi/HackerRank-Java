@@ -7,31 +7,39 @@ public class IsThisBinarySearchTree {
     public static void main(String[] args) {
         if (true) {
             IsThisBinarySearchTree s = new IsThisBinarySearchTree();
-            Node root = new Node(3, 5, 2, 1, 4, 6);
+            Node root = new Node(3, 5, 2, 1, 4, 6); // false
 
             System.out.println("Result: " + s.checkBST(root));
         }
 
         if (true) {
             IsThisBinarySearchTree s = new IsThisBinarySearchTree();
-            Node root = new Node(4, 2, 6, 1, 3, 5, 7);
+            Node root = new Node(4, 2, 6, 1, 3, 5, 7); // true
 
             System.out.println("Result: " + s.checkBST(root));
         }
 
         if (true) {
             IsThisBinarySearchTree s = new IsThisBinarySearchTree();
-            Node root = new Node(7, 5, 9, 3, 6, 8, 12);
+            Node root = new Node(7, 5, 9, 3, 6, 8, 12); // true
 
             System.out.println("Result: " + s.checkBST(root));
         }
 
         if (true) {
             IsThisBinarySearchTree s = new IsThisBinarySearchTree();
-            Node root = new Node(3, 2, 6, 1, 4, 5, 7);
+            Node root = new Node(3, 2, 6, 1, 4, 5, 7); // false
 
             System.out.println("Result: " + s.checkBST(root));
         }
+
+        if (true) {
+            IsThisBinarySearchTree s = new IsThisBinarySearchTree();
+            Node root = new Node(4, 2, 6, 1, 3, 5, 7); // true
+
+            System.out.println("Result: " + s.checkBST(root));
+        }
+
     }
 
     private boolean checkBST(Node root) {

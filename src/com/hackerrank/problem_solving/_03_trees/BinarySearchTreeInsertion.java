@@ -17,8 +17,7 @@ public class BinarySearchTreeInsertion {
 
     private Node insert(Node root, int data) {
         if (root == null) {
-            Node node = new Node(data);
-            root = node;
+            return new Node(data);
         } else if (data > root.data) root.right = insert(root.right, data);
         else root.left = insert(root.left, data);
 

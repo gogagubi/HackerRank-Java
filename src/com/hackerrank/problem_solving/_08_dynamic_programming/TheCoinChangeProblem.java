@@ -14,7 +14,15 @@ public class TheCoinChangeProblem {
             System.out.println("Result = " + s.getWays(n, c));
         }
 
-        if (false) {
+        if (true) {
+            TheCoinChangeProblem s = new TheCoinChangeProblem();
+            List<Long> c = Arrays.asList(8L, 3L, 1L, 2L);
+            int n = 4;
+
+            System.out.println("Result = " + s.getWays(n, c));
+        }
+
+        if (true) {
             TheCoinChangeProblem s = new TheCoinChangeProblem();
             List<Long> c = Arrays.asList(2L, 5L, 3L, 6L);
             int n = 10;
@@ -24,18 +32,16 @@ public class TheCoinChangeProblem {
     }
 
     private long getWays(int n, List<Long> c){
-        long[] combinations = new long[n + 1];
+        long[] dp = new long[n + 1];
 
-        combinations[0] = 1;
+        dp[0] = 1;
 
         for(long coin : c){
-            for(int i = (int)coin; i < combinations.length; i++){
-                if(i >= coin){
-                    combinations[i] += combinations[i - (int)coin];
-                }
+            for(int i = (int)coin; i <= n; i++){
+                dp[i] += dp[i - (int)coin];
             }
         }
-        return combinations[n];
+        return dp[n];
     }
 
     private long getWays1(int n, List<Long> c) {
@@ -48,9 +54,8 @@ public class TheCoinChangeProblem {
 
         for (int i = 0; i < size; i++) {
             for (int j = 1; j <= n; j++) {
-                long x, y;
-                x = (i > 0) ? A[i - 1][j] : 0;
-                y = (j - c.get(i) >= 0) ? A[i][j - c.get(i).intValue()] : 0;
+                long x = (i > 0) ? A[i - 1][j] : 0;
+                long y = (j - c.get(i) >= 0) ? A[i][j - c.get(i).intValue()] : 0;
                 A[i][j] = x + y;
             }
         }
