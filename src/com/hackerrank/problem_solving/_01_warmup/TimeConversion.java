@@ -21,23 +21,17 @@ public class TimeConversion {
     }
 
     private String timeConversion(String s) {
-        String prefix = s.substring(0, 2);
-        String middle = s.substring(2, s.length() - 2);
-        String suffix = s.substring(s.length() - 2, s.length());
-        int hours = Integer.valueOf(prefix);
+        int hour = Integer.valueOf(s.substring(0, 2));
+        String suff = s.substring(s.length() - 2);
 
-        if(suffix.equals("AM")){
-            if(prefix.equals("12")){
-                prefix = "00";
-            }
-        }
-        else{
-            if(hours < 12){
-                prefix = Integer.toString(hours + 12);
-            }
+        if (suff.equals("AM") && hour == 12) {
+            hour = 0;
+        } else if (suff.equals("PM") && hour != 12) {
+            hour += 12;
         }
 
-        return prefix + middle;
+        String hourStr = hour > 9 ? String.valueOf(hour) : "0" + hour;
+        return hourStr + s.substring(2, s.length() - 2);
     }
 
 }

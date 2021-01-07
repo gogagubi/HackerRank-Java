@@ -11,22 +11,26 @@ public class DijkstraShortestReach2 {
         //Test Case 0
         if (true) {
             o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase0"); //expected 24 3 15
+            System.out.println();
         }
 
         //Test Case 1
-        if (false) {
+        if (true) {
             o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase1");
+            System.out.println();
         }
 
         //Test Case 2
         if (true) {
             o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase2");
             //expected 3 6 4 5 5 4 5 4 3 3 4 6 6 4 4 4 4 5 3 4 5 3 4 6 8 4 5 3 4 4 5 4 6 6 2 4 6 4 4 4 4 5 5 3 4 5 3 6 5 4 5 5 4 4 5 3 3 4 2 3 5 2 4 4 3 4 10 5 5 7 4 4 4 1 4 4 4 5 4 4 5 4 4 5 4 5 6 5 4 4 5 5 5 4 4 4 4 3 4 5 3 3 5 4 6 8 2 5 3 4 4 5 3 5 3 3 4 5 3 6 5
+            System.out.println();
         }
 
         //Test Case 8
         if (true) {
             o.runTestCase("in/problem_solving/_06_graph_theory/DijkstraShortestReach2_TestCase8"); //expected 10 16 8 -1
+            System.out.println();
         }
     }
 

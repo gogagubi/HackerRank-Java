@@ -18,7 +18,7 @@ public class TreeInorderTraversal {
 
         if (true) {
             TreeInorderTraversal s = new TreeInorderTraversal();
-            Node root = new Node(1, null, 2, null, 5, 3, 6, null, 4);
+            Node root = new Node(1, 2, 3, 4, 5, 6, 7);
 
             System.out.print("Result: ");
             s.inOrderV1(root);

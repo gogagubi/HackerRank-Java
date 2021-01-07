@@ -11,7 +11,7 @@ public class EvenTree {
             List<Integer> from = Arrays.asList(2, 3, 4, 5, 6, 7, 8, 9, 10);
             List<Integer> to = Arrays.asList(1, 1, 3, 2, 1, 2, 6, 8, 8);
 
-            System.out.println("Result = " + o.evenForest(nodes, edges, from, to)); //expected 6, 6, 12, -1
+            System.out.println("Result = " + o.evenForest(nodes, edges, from, to)); //expected 2
         }
     }
 

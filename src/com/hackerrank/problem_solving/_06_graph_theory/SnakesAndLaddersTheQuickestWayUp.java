@@ -101,7 +101,7 @@ public class SnakesAndLaddersTheQuickestWayUp {
             }
         }
 
-        return curr[0] == 100 ? curr[1] : -1;
+        return curr[0] == n ? curr[1] : -1;
     }
 
 }

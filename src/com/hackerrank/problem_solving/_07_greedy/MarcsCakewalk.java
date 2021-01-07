@@ -24,12 +24,12 @@ public class MarcsCakewalk {
     private long marcsCakewalk(int[] calorie) {
         Arrays.sort(calorie);
         int power = 0;
-        long minMiles = 0;
+        long ans = 0;
         for (int i = calorie.length - 1; i >= 0; i--) {
-            minMiles += Math.pow(2, power++) * calorie[i];
+            ans += Math.pow(2, power++) * calorie[i];
         }
 
-        return minMiles;
+        return ans;
     }
 
 }

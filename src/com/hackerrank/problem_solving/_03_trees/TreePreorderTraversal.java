@@ -18,24 +18,15 @@ public class TreePreorderTraversal {
 
         if (true) {
             TreePreorderTraversal s = new TreePreorderTraversal();
-            Node root = new Node(1, null, 2, null, 5, 3, 6, null, 4);
+            Node root = new Node(1, 2, 3, 4, 5, 6, 7);
 
             System.out.print("Result: ");
-            s.preOrderV1(root);
+            s.preOrder(root);
             System.out.println();
         }
     }
 
     private void preOrder(Node root) {
-        if (root == null) return;
-
-        System.out.print(root.data + " ");
-        preOrder(root.left);
-        preOrder(root.right);
-    }
-
-
-    private void preOrderV1(Node root) {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
 
@@ -47,5 +38,15 @@ public class TreePreorderTraversal {
             if(curr.left != null) stack.push(curr.left);
         }
     }
+
+
+    /*private void preOrder(Node root) {
+        if (root == null) return;
+
+        System.out.print(root.data + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }*/
+
 
 }

@@ -1,7 +1,5 @@
 package com.hackerrank.problem_solving._10_bit_manipulation;
 
-import java.util.*;
-
 public class LonelyInteger {
 
     public static void main(String[] args) {

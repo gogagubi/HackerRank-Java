@@ -25,15 +25,12 @@ public class TreeHeightOfBinaryTree {
     }
 
     private int height(Node root) {
-        return calcHeight(root, 0);
-    }
+        if (root == null) return -1;
 
-    private int calcHeight(Node root, int level) {
-        if (root == null) return 0;
+        int lh = height(root.left);
+        int rh = height(root.right);
 
-        int max = Math.max(calcHeight(root.left, level + 1), calcHeight(root.right, level + 1));
-        max = Math.max(max, level);
-        return max;
+        return Math.max(lh, rh) + 1;
     }
 
 }
