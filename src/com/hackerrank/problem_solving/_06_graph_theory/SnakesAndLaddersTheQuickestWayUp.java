@@ -86,22 +86,27 @@ public class SnakesAndLaddersTheQuickestWayUp {
         while (!queue.isEmpty()) {
             curr = queue.poll();
 
-            if (curr[0] == n) break;
+            if (curr[0] == n) {
+                return curr[1];
+            }
 
             for (int i = curr[0] + 1; i <= curr[0] + 6 && i <= n; i++) {
                 if (!visited[i]) {
+                    if (i == n) {
+                        return curr[1] + 1;
+                    }
+
                     visited[i] = true;
                     int[] entry = new int[2];
                     entry[1] = curr[1] + 1;
 
-                    if (routes[i] == 0) entry[0] = i;
-                    else entry[0] = routes[i];
+                    entry[0] = (routes[i] == 0) ? i : routes[i];
                     queue.add(entry);
                 }
             }
         }
 
-        return curr[0] == n ? curr[1] : -1;
+        return -1;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.hackerrank.interviewpreparation._09_recurstion_and_backtracking;
+package com.hackerrank.interviewpreparation._09_recursion_and_backtracking;
 
 import java.util.HashMap;
 import java.util.Map;
