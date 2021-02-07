@@ -3,7 +3,7 @@ package com.hackerrank.interviewpreparation._08_search;
 public class MakingCandies {
 
     public static void main(String[] args) {
-        if (false) {
+        if (true) {
             MakingCandies o = new MakingCandies();
             long m = 1, w = 2, p = 1, n = 60;
 
@@ -17,7 +17,7 @@ public class MakingCandies {
             System.out.println("Result: " + o.minimumPasses(m, w, p, n)); //Expected 16
         }
 
-        if (false) {
+        if (true) {
             MakingCandies o = new MakingCandies();
             long m = 123456789012L, w = 215987654321L, p = 50000000000L, n = 1000000000000L;
 
